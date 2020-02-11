@@ -26,7 +26,7 @@ async function run() {
       useCreateIndex: true
     })
     console.log("MongoDB connected successfully");
-    app.listen(PORT, () => {
+    app.listen(process.env.PORT || PORT, () => {
       createFakeData();
       console.log(`Server is running on port ${ PORT }...`)
     })
