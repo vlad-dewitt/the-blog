@@ -118,7 +118,7 @@ router.post('/verify', async (req, res) => {
       { useFindAndModify: false }
     )
 
-    res.json({ isAuthenticated: true, userId, token: new_token, username: user.username, profile: user.profile })
+    res.status(200).json({ isAuthenticated: true, userId, token: new_token, username: user.username, profile: user.profile })
   } catch (err) {
     res.status(500).json({ message: "Operation failed" })
   }

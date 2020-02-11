@@ -38,6 +38,11 @@ async function run() {
 
 
 
+app.use('/api/auth', authRoutes);
+app.use('/api/feed', feedRoutes);
+
+
+
 if (process.env.NODE_ENV === 'production') {
   app.use('/', express.static(path.join(__dirname, 'client', 'build')))
   app.get('*', (req, res) => {
@@ -48,9 +53,6 @@ if (process.env.NODE_ENV === 'production') {
     res.send(200, "This is \"Hello\" from The Blog server!")
   });
 }
-
-app.use('/api/auth', authRoutes);
-app.use('/api/feed', feedRoutes);
 
 
 

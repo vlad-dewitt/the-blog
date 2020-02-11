@@ -13,7 +13,7 @@ export const getFeedLength = function() {
     const response = await fetch('/api/feed/feed-length', {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
+        'Accept': 'application/json',
         'Authorization': auth.token
       }
     });
@@ -24,7 +24,7 @@ export const getFeedLength = function() {
       reject(data.message || 'Something went wrong...')
     }
 
-    resolve(data);
+    resolve(data.count);
   })
 }
 
@@ -41,7 +41,7 @@ export const getPosts = function(index) {
     const response = await fetch(url, {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
+        'Accept': 'application/json',
         'Authorization': auth.token
       }
     });
@@ -52,7 +52,7 @@ export const getPosts = function(index) {
       reject(data.message || 'Something went wrong...')
     }
 
-    resolve(data);
+    resolve(data.feed);
   })
 }
 
@@ -68,6 +68,7 @@ export const createPost = function(text) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Accept': 'application/json',
         'Authorization': auth.token
       },
       body: JSON.stringify({ text })
@@ -94,7 +95,7 @@ export const getPost = function(id) {
     const response = await fetch(`/api/feed/${ id }`, {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
+        'Accept': 'application/json',
         'Authorization': auth.token
       }
     });
@@ -121,6 +122,7 @@ export const commentPost = function(post_id, text) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Accept': 'application/json',
         'Authorization': auth.token
       },
       body: JSON.stringify({ post_id, text })

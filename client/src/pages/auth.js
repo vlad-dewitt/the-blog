@@ -98,6 +98,7 @@ export default function({ onAuth }) {
               iconPosition='left'
               name='password'
               label='Password'
+              placeholder='Password'
               type='password'
               value={ form.password.value }
               onChange={ changeForm }

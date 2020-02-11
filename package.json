@@ -9,7 +9,8 @@
     "client:install": "yarn --cwd client install",
     "client:build": "yarn --cwd client build",
     "server": "nodemon --ignore './client/' app.js",
-    "start-dev": "cross-env NODE_ENV=development concurrently \"yarn server\" \"yarn client\""
+    "start-dev": "cross-env NODE_ENV=development concurrently \"yarn server\" \"yarn client\"",
+    "deploy": "git push heroku master"
   },
   "author": "Vlad Dewitt <dewitt.official@gmail.com>",
   "license": "ISC",

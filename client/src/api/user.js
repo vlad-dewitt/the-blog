@@ -12,7 +12,10 @@ export const verify = function() {
 
     const response = await fetch('/api/auth/verify', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
       body: JSON.stringify({ userId: auth.userId, token: auth.token })
     });
 
@@ -34,7 +37,10 @@ export const login = function(username, password) {
   return new Promise(async (resolve, reject) => {
     const response = await fetch('/api/auth/login', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
       body: JSON.stringify({ username, password })
     });
 
@@ -56,7 +62,10 @@ export const signUp = function(username, password) {
   return new Promise(async (resolve, reject) => {
     const response = await fetch('/api/auth/sign-up', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
       body: JSON.stringify({ username, password })
     });
 
@@ -86,6 +95,7 @@ export const updateProfile = function(profile) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Accept': 'application/json',
         'Authorization': auth.token
       },
       body: JSON.stringify({ userId: auth.userId, token: auth.token, profile })
