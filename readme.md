@@ -2,9 +2,13 @@
 
 **This application is developed as a test task.  
 What features does this app have:**
+
 - Sign up/Login, edit Profile
+
 - Create posts in a shared feed
+
 - View posts feed
+
 - Comment posts
 
 
@@ -12,15 +16,20 @@ What features does this app have:**
 ## Links
 
 [The Blog on Heroku](https://the-blog-vlad-dewitt.herokuapp.com/)
+
 [dewitt.official@gmail.com](mailto:dewitt.official@gmail.com)
 
 
 
 ## Tools Kit
 - Node.js + Express
+
 - MongoDB
+
 - React.js
+
 - React Router
+
 - Semantic UI
 
 
@@ -38,3 +47,7 @@ What features does this app have:**
     /client/src/pages        # Main components - pages
     /client/src/components   # React unit components
     /client/src/utils        # Small tools for front-end use
+
+
+
+> Thank you for your time!
