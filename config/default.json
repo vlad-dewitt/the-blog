@@ -1,0 +1,5 @@
+{
+  "PORT": 4000,
+  "mongoURI": "mongodb+srv://dbVladDewitt:lolkek123@main-twgux.mongodb.net/test?retryWrites=true&w=majority",
+  "auth_secret": "the blog auth secret"
+}
